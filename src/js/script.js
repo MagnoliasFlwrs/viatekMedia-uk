@@ -25,3 +25,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+
+
+// menu-modal
+
+const menuModal = document.querySelector('.menu-modal');
+const openMenuModal = document.querySelector('.burger-btn');
+const closeMenuModal = document.querySelector('.close-btn');
+const menuModalDropdown = menuModal.querySelector('.dropdown');
+const overlay = document.querySelector('.overlay');
+
+
+openMenuModal.addEventListener('click', function(event) {
+    menuModal.classList.add('open');
+    overlay.classList.add('open');
+})
+closeMenuModal.addEventListener('click', function(event) {
+    menuModal.classList.remove('open');
+    overlay.classList.remove('open');
+})
+overlay.addEventListener('click', function(event) {
+    menuModal.classList.remove('open');
+    overlay.classList.remove('open');
+})
+
+menuModalDropdown.addEventListener('click', function(event) {
+    menuModalDropdown.classList.toggle('active');
+})
+menuModalDropdown.querySelectorAll('.dropdown-menu a').forEach(elem => {
+    elem.addEventListener('click', function(event) {
+        event.stopPropagation();
+    })
+})

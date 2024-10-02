@@ -9,6 +9,62 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="overlay"></div>
+    <div class="menu-modal">
+        <div class="close-row">
+            <span class="close-btn">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="6" y1="32.5858" x2="32.8701" y2="5.71573" stroke="#2CB4FE" stroke-width="2" stroke-linecap="round"/>
+                <line x1="7.41421" y1="6" x2="34.2843" y2="32.8701" stroke="#2CB4FE" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </span>
+        </div>
+        <ul class="navigation">
+            <li class="dropdown">
+                <a class="dropdown-link" href="#">О компании</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Наши сотрудники</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="#">Лицензии</a></li>
+                    <li><a href="#">Благодарности</a></li>
+                    <li><a href="#">Реквизиты</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Список домов</a></li>
+            <li><a href="#">Отчеты</a></li>
+            <li><a href="#">Капитальный ремонт</a></li>
+            <li><a href="#">Передать показания</a></li>
+            <li><a href="#">Платные услуги</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Антитеррористическая безопасность</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <div class="contacts-row">
+            <div class="row">
+                <span>Аварийно-диспетчерская служба</span>
+                <a href="tel:+7 (4725) 22-00-55">+7 (4725) 22-00-55</a>
+                <p class="time">Круглосуточно</p>
+            </div>
+            <div class="row">
+                <span>Бухгалтерия по квартирной плате</span>
+                <a href="tel:+7 (4725) 33-33-97">+7 (4725) 33-33-97</a>
+                <p class="time">Пн-Пт: 09.00-17.00</p>
+            </div>
+            <div class="row">
+                <span>E-mail:</span>
+                <a href="mailto:info@kompaniya.ru">info@kompaniya.ru</a>
+            </div>
+            <div class="row">
+                <p>Режим работы:</p>
+                <ul>
+                    <li>ПН-ПТ: 09.00-18.00</li>
+                    <li>СБ: 09.00-16.00</li>
+                    <li>ВС: Выходной</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
     <header class="header">
         <div class="content">
             <div class="header-row">
@@ -54,8 +110,15 @@
                 </a>
                 <nav class="navigation">
                     <ul>
-                        <li>
-                            <a href="#" class="dropdown">О компании</a>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-link">О компании</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Наши сотрудники</a></li>
+                                <li><a href="#">Вакансии</a></li>
+                                <li><a href="#">Лицензии</a></li>
+                                <li><a href="#">Благодарности</a></li>
+                                <li><a href="#">Реквизиты</a></li>
+                            </ul>
                         </li>
                         <li>
                             <a href="#">Список домов</a>
