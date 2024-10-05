@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const heroSwiper = document.querySelector('.hero-swiper');
 
 if (heroSwiper) {
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper(heroSwiper, {
         loop: true,
         pagination: {
             el: '.hero-swiper .custom-swiper-pagination',
@@ -76,13 +76,6 @@ if (servicesSelect) {
 }
 
 
-
-
-
-
-
-
-
 // menu-modal
 
 const menuModal = document.querySelector('.menu-modal');
@@ -112,4 +105,88 @@ menuModalDropdown.querySelectorAll('.dropdown-menu a').forEach(elem => {
     elem.addEventListener('click', function(event) {
         event.stopPropagation();
     })
+})
+
+
+const servicesSwiper = document.querySelector('.services-swiper');
+
+if (servicesSwiper) {
+    const swiperServ = new Swiper(servicesSwiper, {
+        loop: true,
+        slidesPerView: 1.3,
+        spaceBetween: 20,
+        breakpoints: {
+            900: {
+                slidesPerView: 2.2,
+            },
+            1024: {
+                slidesPerView: 3.2,
+            },
+            1300: {
+                slidesPerView: 4.2,
+            },
+            1532 :{
+                slidesPerView:5
+            }
+        }
+    });
+}
+
+const staffCardsBtns = document.querySelectorAll('.staff-card button');
+staffCardsBtns?.forEach(btn => {
+    btn.addEventListener('click', function(event) {
+        let currentCard = event.target.closest('.staff-card');
+        let currentInfoList = currentCard.querySelector('.staff-info');
+        let currentInfoListCloseBtn = currentInfoList.querySelector('.close-row span');
+
+        currentInfoList.classList.add('active');
+
+        currentInfoListCloseBtn.addEventListener('click', function(event) {
+            currentInfoList.classList.remove('active');
+        })
+    })
+})
+
+const vacancySwiper = document.querySelector('.vacancy-swiper');
+
+if (vacancySwiper) {
+    const swiperVacancy = new Swiper(vacancySwiper, {
+        loop: true,
+        slidesPerView: 1.3,
+
+        breakpoints: {
+            900: {
+                slidesPerView: 2.2,
+            },
+            1024: {
+                slidesPerView: 3.2,
+            },
+            1532 :{
+                slidesPerView:4
+            }
+        },
+        navigation: {
+            nextEl: '.vacancy-swiper-button-next',
+            prevEl: '.vacancy-swiper-button-prev',
+        },
+    });
+}
+
+const operatingTimeModal = document.querySelector('.operating-time-modal');
+const operatingTimeModalBtns = document.querySelectorAll('.operating-time-modal-btn');
+const operatingTimeModalClose = document.querySelector('.operating-time-modal .close-row span');
+
+operatingTimeModalBtns?.forEach(btn => {
+    btn.addEventListener('click', function(event) {
+        operatingTimeModal.classList.add('active');
+        overlay.classList.add('open');
+    })
+})
+operatingTimeModalClose.addEventListener('click', function(event) {
+    operatingTimeModal.classList.remove('active');
+    overlay.classList.remove('open');
+})
+overlay.addEventListener('click', function(event) {
+    operatingTimeModal.classList.remove('active');
+    overlay.classList.remove('open');
 })
