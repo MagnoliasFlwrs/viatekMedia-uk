@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./swiper-bundle.min.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -160,6 +163,145 @@
 
         </div>
     </div>
+    <div class="callback-modal">
+        <div class="close-row">
+            <span class="close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#2CB4FE"/>
+                </svg>
+            </span>
+        </div>
+
+        <form>
+            <p class="title">Обратная связь</p>
+            <div class="services-wrap">
+                <div class="services">
+                    <p data-current="0">Не определено</p>
+                </div>
+                <ul class="services-list">
+                    <li data-value="0">Не определено</li>
+                    <li data-value="1">Вопрос</li>
+                    <li data-value="2">Жалоба</li>
+                    <li data-value="3">Обращение</li>
+                    <li data-value="4">Прочее</li>
+                </ul>
+            </div>
+            <p>
+                Спасибо, что обратились к нам!<br><br>
+                Как только мы получим от вас сообщение, наши менеджеры постараются в кратчайшие сроки дать вам исчерпывающую информацию по всем вашим вопросам.
+            </p>
+            <input class="input" type="text" placeholder="Ваше имя">
+            <input class="input" type="tel" placeholder="+7 (___) ___ - __ - __">
+            <textarea placeholder="Дополнительная информация"></textarea>
+            <div class="agreement">
+                <label class="switch">
+                    <input type="checkbox" class="agreement-check">
+                    <span class="slider round"></span>
+                </label>
+                <p>Я даю согласие на обработку персональных данных в соответствии с законодательством Российской Федерации</p>
+            </div>
+            <button type="submit" class="ripple blue-btn">
+                <span>Отправить</span>
+            </button>
+
+        </form>
+    </div>
+    <div class="content-modal">
+        <div class="content-modal-body">
+            <span class="close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#2CB4FE"/>
+                </svg>
+            </span>
+            <div class="content-body-wrapper">
+                <h2>Кожа привыкает к косметике – миф или правда?</h2>
+                <div class="img">
+                    <img src="./src/images/news-img.png" alt="news-image">
+                </div>
+                <span>В целом миф, конечно, но есть нюансы, из-за которых и возникает этот миф.</span>
+                <p>Базовые средства</p>
+                <span>Хорошей умывалкой, увлажняющей маской, кремом с spf и другими базовыми средствами ухода можно пользоваться годами, если они вам нравятся и подходят.</span>
+                <p>Когда нужно менять такую косметику?</p>
+                <ol>
+                    <li>
+                        <span>1</span>
+                        <p>Когда изменилось состояние кожи и ее потребности. И любимые косметические средства вам не очень подходят.<br><br>
+                            Например, раньше умывались пенкой, но с возрастом кожа стала суше, и теперь лучше использовать очищающую эмульсию.</p>
+                    </li>
+                    <li>
+                        <span>2</span>
+                        <p>Если для разнообразия хочется попробовать что-то новое. Это нормально желание.</p>
+                    </li>
+                </ol>
+                <p>Стимулирующие средства</p>
+                <span>Ретинол, пептиды, факторы роста, а также стимулирующие процедуры нужно делать курсами.</span>
+                <span>Курсы могут быть разной продолжительности, это зависит от многих факторов – от проблемы, возраста, актива и типа процедуры. Но в любом случае периодически нужно делать перерыв. Зачем? Чтобы повысить эффективность. </span>
+                <span>ак уж устроен наш организм – когда на нас действует один и тот же раздражитель, со временем это приводит к снижению чувствительности и ответной реакции. </span>
+                <h3>Количество не переходит в качество, а наоборот</h3>
+                <span>Ретинол, пептиды, факторы роста, а также стимулирующие процедуры нужно делать курсами.</span>
+                <h4>Список выглядит так:</h4>
+                <ul>
+                    <li>Когда изменилось состояние кожи и ее потребности. И любимые косметические средства вам не очень подходят. </li>
+                    <li>Если для разнообразия хочется попробовать что-то новое. Это нормально желание.</li>
+                </ul>
+                <button type="button" class="ripple close-btn">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L4.29289 11.2929C4.10536 11.4804 4 11.7348 4 12C4 12.2652 4.10536 12.5196 4.29289 12.7071L10.2929 18.7071C10.6834 19.0976 11.3166 19.0976 11.7071 18.7071C12.0976 18.3166 12.0976 17.6834 11.7071 17.2929L7.41421 13L19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11L7.41421 11L11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289Z" fill="#2CB4FE"/>
+                        </svg>
+                        Вернуться
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="data-modal">
+        <div class="data-modal-body">
+            <span class="close-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#2CB4FE"/>
+                </svg>
+            </span>
+            <div class="data-modal-wrapper">
+                <h2>Передать показания онлайн</h2>
+                <p class="subtitle">Для того чтобы передать показания, выберите услугу и перейдите на сайт соответствующей компании.</p>
+                <div class="sites">
+                    <div class="site-card">
+                        <div class="img">
+                            <img src="./src/images/site1.png" alt="logo">
+                        </div>
+                        <a href="#" class="blue-btn ripple">
+                            <span>Перейти на сайт</span>
+                        </a>
+                    </div>
+                    <div class="site-card">
+                        <div class="img">
+                            <img src="./src/images/site2.png" alt="logo">
+                        </div>
+                        <a href="#" class="blue-btn ripple">
+                            <span>Перейти на сайт</span>
+                        </a>
+                    </div>
+                    <div class="site-card">
+                        <div class="img">
+                            <img src="./src/images/site3.png" alt="logo">
+                        </div>
+                        <a href="#" class="blue-btn ripple">
+                            <span>Перейти на сайт</span>
+                        </a>
+                    </div>
+                </div>
+                <button type="button" class="ripple close-btn">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M11.7071 5.29289C11.3166 4.90237 10.6834 4.90237 10.2929 5.29289L4.29289 11.2929C4.10536 11.4804 4 11.7348 4 12C4 12.2652 4.10536 12.5196 4.29289 12.7071L10.2929 18.7071C10.6834 19.0976 11.3166 19.0976 11.7071 18.7071C12.0976 18.3166 12.0976 17.6834 11.7071 17.2929L7.41421 13L19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11L7.41421 11L11.7071 6.70711C12.0976 6.31658 12.0976 5.68342 11.7071 5.29289Z" fill="#2CB4FE"/>
+                        </svg>
+                        Вернуться
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
     <header class="header">
         <div class="content">
             <div class="header-row">
@@ -175,7 +317,7 @@
                         <a href="tel:+74725220055">+7 (4725) 22-00-55</a>
                     </div>
                     <button class="timing ripple operating-time-modal-btn" type="button"><span>Режим работы</span></button>
-                    <button class="callback ripple" type="button"><span>Обратная связь</span></button>
+                    <button class="callback ripple callback-modal-show" type="button"><span>Обратная связь</span></button>
                     <a href="#" class="contact-link watsapp">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M0 24L1.72642 17.5828C0.747663 15.8259 0.237893 13.8587 0.237893 11.8576C0.237893 5.31827 5.56669 0 12.1189 0C18.6712 0 24 5.31827 24 11.8576C24 18.3968 18.6712 23.7151 12.1189 23.7151C10.1546 23.7151 8.2107 23.2199 6.47069 22.277L0 24ZM6.78335 19.8689L7.19116 20.1131C8.68649 21.0017 10.3857 21.4697 12.1054 21.4697C17.4138 21.4697 21.7366 17.1555 21.7366 11.8576C21.7366 6.55964 17.4138 2.24533 12.1054 2.24533C6.79694 2.24533 2.47409 6.55964 2.47409 11.8576C2.47409 13.6077 2.96347 15.3307 3.88105 16.8434L4.13254 17.2504L3.16737 20.8321L6.78335 19.8689Z" fill="#204357"/>
@@ -371,15 +513,15 @@
                     <div class="news-banner">
                         <h2>Новости</h2>
                         <div class="news-cards">
-                            <a href="#" class="news-card">
+                            <a href="#" class="news-card show-content-page-btn">
                                 <p>Собрание по вопросу благоустройства</p>
                                 <span>27.03.2025</span>
                             </a>
-                            <a href="#" class="news-card">
+                            <a href="#" class="news-card show-content-page-btn">
                                 <p>Вниманию собственников НЕЖИЛЫХ помещений</p>
                                 <span>19.03.2025</span>
                             </a>
-                            <a href="#" class="news-card">
+                            <a href="#" class="news-card show-content-page-btn">
                                 <p>Безопасность детей дома</p>
                                 <span>11.03.2025</span>
                             </a>
@@ -411,7 +553,7 @@
                                 <p class="title">Передать показания</p>
                                 <span class="subtitle">Не забывайте передавать показания каждый месяц</span>
                                 <div class="btn-wrapper">
-                                    <button class="blue-btn ripple" type="button">
+                                    <button class="blue-btn ripple show-data-page-btn" type="button">
                                         <span>Связаться</span>
                                     </button>
                                 </div>

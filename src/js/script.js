@@ -1,36 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-
-    document.querySelectorAll('.ripple').forEach(function(button) {
-        button.addEventListener('mouseover', function(event) {
-            event.preventDefault();
-
-            let div = document.createElement('div');
-            let btnOffset = this.getBoundingClientRect();
-            let xPos = event.pageX - btnOffset.left - window.scrollX;
-            let yPos = event.pageY - btnOffset.top - window.scrollY;
-
-            div.classList.add('ripple-effect');
-
-            let ripple = this.querySelector('.ripple-effect');
-
-            if (!ripple) {
-                div.style.height = this.offsetHeight + 'px';
-                div.style.width = this.offsetHeight + 'px';
-                div.style.top = yPos - (this.offsetHeight / 2) + 'px';
-                div.style.left = xPos - (this.offsetHeight / 2) + 'px';
-                div.style.background = this.getAttribute('data-ripple-color');
-
-                this.appendChild(div);
-
-                window.setTimeout(function(){
-                    div.remove();
-                }, 1000);
-            }
-        });
-    });
-
-});
-
 const heroSwiper = document.querySelector('.hero-swiper');
 
 if (heroSwiper) {
@@ -49,31 +16,57 @@ if (heroSwiper) {
 
 // custom select
 
-const servicesSelect =  document.querySelector('.services');
-const servicesOptions = document.querySelectorAll('.services-list li');
-const servicesSelectBody = document.querySelector('.services-list');
+// const servicesSelect =  document.querySelector('.services');
+// const servicesOptions = document.querySelectorAll('.services-list li');
+// const servicesSelectBody = document.querySelector('.services-list');
+//
+//
+// if (servicesSelect) {
+//     servicesSelect.addEventListener('click' , () => {
+//         servicesSelectBody.classList.add('active');
+//     })
+//     servicesSelect.querySelector('p').addEventListener('click' , () => {
+//         servicesSelectBody.classList.add('active');
+//     })
+//     servicesOptions.forEach(el => {
+//         el.addEventListener('click' , ()=> {
+//             servicesSelect.querySelector('p').innerHTML = el.innerHTML;
+//             servicesSelect.dataset.current = el.dataset.value;
+//             servicesSelectBody.classList.remove('active')
+//         })
+//     })
+//     document.addEventListener('click' , (e)=> {
+//         if ((!e.target.closest('.services-wrap')) && servicesSelectBody.classList.contains('active')) {
+//             servicesSelectBody.classList.remove('active');
+//         }
+//     })
+// }
 
+const servicesSelects =  document.querySelectorAll('.services');
 
-if (servicesSelect) {
-    servicesSelect.addEventListener('click' , () => {
+servicesSelects?.forEach((item) => {
+    item.addEventListener('click' , ()=> {
+        const servicesOptions = item.closest('.services-wrap').querySelectorAll('.services-list li');
+        const servicesSelectBody = item.closest('.services-wrap').querySelector('.services-list');
+
         servicesSelectBody.classList.add('active');
-    })
-    servicesSelect.querySelector('p').addEventListener('click' , () => {
-        servicesSelectBody.classList.add('active');
-    })
-    servicesOptions.forEach(el => {
-        el.addEventListener('click' , ()=> {
-            servicesSelect.querySelector('p').innerHTML = el.innerHTML;
-            servicesSelect.dataset.current = el.dataset.value;
-            servicesSelectBody.classList.remove('active')
+        item.closest('.services-wrap').querySelector('p').addEventListener('click' , () => {
+            servicesSelectBody.classList.add('active');
+        })
+        servicesOptions.forEach(el => {
+            el.addEventListener('click' , ()=> {
+                item.querySelector('p').innerHTML = el.innerHTML;
+                item.dataset.current = el.dataset.value;
+                servicesSelectBody.classList.remove('active')
+            })
+        })
+        document.addEventListener('click' , (e)=> {
+            if ((!e.target.closest('.services-wrap')) && servicesSelectBody.classList.contains('active')) {
+                servicesSelectBody.classList.remove('active');
+            }
         })
     })
-    document.addEventListener('click' , (e)=> {
-        if ((!e.target.closest('.services-wrap')) && servicesSelectBody.classList.contains('active')) {
-            servicesSelectBody.classList.remove('active');
-        }
-    })
-}
+})
 
 
 // menu-modal
@@ -190,3 +183,104 @@ overlay.addEventListener('click', function(event) {
     operatingTimeModal.classList.remove('active');
     overlay.classList.remove('open');
 })
+
+
+const callBackModal = document.querySelector('.callback-modal');
+const callBackModalCloseBtn = document.querySelector('.callback-modal .close-row span');
+const callBackModalShowBtns = document.querySelectorAll('.callback-modal-show');
+
+callBackModalShowBtns?.forEach(btn => {
+    btn.addEventListener('click', function(event) {
+        callBackModal.classList.add('active');
+        overlay.classList.add('open');
+    })
+})
+
+callBackModalCloseBtn.addEventListener('click', function(event) {
+    callBackModal.classList.remove('active');
+    overlay.classList.remove('open');
+})
+overlay.addEventListener('click', function(event) {
+    callBackModal.classList.remove('active');
+    overlay.classList.remove('open');
+})
+
+const contentPageModal = document.querySelector('.content-modal');
+const contentPageModalCloseBtns = document.querySelectorAll('.content-modal .close-btn');
+const showContentPageModalBtns = document.querySelectorAll('.show-content-page-btn');
+
+showContentPageModalBtns?.forEach(btn => {
+    btn.addEventListener('click', function(event) {
+        event.stopPropagation();
+        event.preventDefault();
+        contentPageModal.classList.add('active');
+        overlay.classList.add('open');
+    })
+})
+contentPageModalCloseBtns.forEach(btn => {
+    btn.addEventListener('click', function(event) {
+        event.stopPropagation();
+        event.preventDefault();
+        contentPageModal.classList.remove('active');
+        overlay.classList.remove('open');
+    })
+})
+
+overlay.addEventListener('click', function(event) {
+    contentPageModal.classList.remove('active');
+    overlay.classList.remove('open');
+})
+
+const dataModal = document.querySelector('.data-modal');
+const dataPageModalCloseBtns = document.querySelectorAll('.data-modal .close-btn');
+const showDataPageModalBtns = document.querySelectorAll('.show-data-page-btn');
+
+showDataPageModalBtns?.forEach(btn => {
+    btn.addEventListener('click', function(event) {
+        event.stopPropagation();
+        event.preventDefault();
+        dataModal.classList.add('active');
+        overlay.classList.add('open');
+    })
+})
+dataPageModalCloseBtns.forEach(el=> {
+    el.addEventListener('click', function(event) {
+        event.stopPropagation();
+        event.preventDefault();
+        dataModal.classList.remove('active');
+        overlay.classList.remove('open');
+    })
+})
+overlay.addEventListener('click', function(event) {
+    dataModal.classList.remove('active');
+    overlay.classList.remove('open');
+})
+
+
+const accordeonItems = document.querySelectorAll('.accordion-item');
+
+accordeonItems?.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+    const content = item.querySelector('.accordion-content');
+
+    header.addEventListener('click', function () {
+
+        accordeonItems.forEach(i => {
+            if (i !== item) {
+                i.classList.remove('active');
+                i.querySelector('.accordion-content').style.maxHeight = null;
+            }
+        });
+
+        item.classList.toggle('active');
+        if (item.classList.contains('active')) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+            content.style.maxHeight = null;
+        }
+    });
+});
+
+Fancybox.bind("[data-fancybox]", {
+
+});
