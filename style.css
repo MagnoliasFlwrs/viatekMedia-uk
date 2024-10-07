@@ -193,7 +193,7 @@ body {
 .blue-btn.full-width:hover::before {
   content: "";
   transform: scale(80);
-  transition: 1s ease;
+  transition: 1.5s ease;
   bottom: -10px;
 }
 .blue-btn.full-width:hover span {
