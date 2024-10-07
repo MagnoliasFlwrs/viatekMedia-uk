@@ -144,7 +144,7 @@ body {
   &:hover{
     &::before {
       content: "";
-      transform: scale(80);
+      transform: scale(20);
       transition: 1s ease;
       bottom: -10px;
     }
@@ -176,6 +176,31 @@ body {
   border-radius: 20px;
   width: fit-content;
   cursor: pointer;
+  &.full-width {
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fff;
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      z-index: 0;
+      transition: 1s ease;
+    }
+    &:hover{
+      &::before {
+        content: "";
+        transform: scale(80);
+        transition: 1s ease;
+        bottom: -10px;
+      }
+      span {
+        color: var(--brand-color);
+      }
+    }
+  }
   span {
     color: #FFF;
     font-family: "Mplus 1p";
@@ -190,8 +215,8 @@ body {
   &:hover{
     &::before {
       content: "";
-      transform: scale(80);
-      transition: .5s ease;
+      transform: scale(20);
+      transition: 1s ease;
       bottom: -10px;
     }
     span {
@@ -208,7 +233,7 @@ body {
     bottom: -30px;
     left: 50%;
     z-index: 0;
-    transition: .5s ease;
+    transition: 1s ease;
   }
 }
 
