@@ -510,6 +510,7 @@ body {
               gap: 30px;
               border-radius: 0px 10px 10px 10px;
               background: #FFF;
+              z-index: 10;
               display: none;
               li {
                 a {
@@ -1324,6 +1325,7 @@ body {
         background: transparent;
         width: fit-content;
         cursor: pointer;
+        margin-top: 20px;
 
         &:hover {
           span {
@@ -2376,6 +2378,17 @@ body {
             .img-container {
               width: 100%;
               height: 100%;
+              position: relative;
+              &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: linear-gradient(180deg, rgba(2,0,36,0) 85%, rgba(255,255,255,1) 86%);
+                z-index: 1;
+              }
               @media (max-width: 1490px) {
                 display: flex;
                 width: 300px;
@@ -2385,6 +2398,10 @@ body {
                 background: #EDF3F7;
                 height: 300px;
                 overflow: hidden;
+                &::before {
+                  content: none;
+
+                }
               }
               img {
                 width: 100%;
@@ -2392,6 +2409,11 @@ body {
                 object-fit: cover;
                 object-position: center;
                 transition: 1s ease;
+                height: 493px;
+                @media (max-width: 1490px) {
+                  height: auto;
+                  object-position: top center;
+                }
               }
             }
             .title {
@@ -2557,74 +2579,80 @@ body {
         background: #FFFFFF;
         border-radius: 40px;
       }
-      h2 {
-        color: #204357;
-        font-family: Raleway;
-        font-size: 55px;
-        font-style: normal;
-        font-weight: 100;
-        line-height: normal;
-        @media (max-width: 900px) {
-          font-size: 40px;
-        }
-      }
-      .blue-btn {
-        width: 100%;
+      .vacancies-wrapper {
+        padding: 30px;
         display: flex;
-        justify-content: center;
-      }
-      .vacancy-swiper {
-        width: 100%;
-        height: 221px;
-
-        .swiper-slide {
-          padding: 0 20px;
-          @media (max-width: 1250px) {
-            padding: 0;
+        flex-direction: column;
+        gap: 30px;
+        background: #FFFFFF;
+        border-radius: 40px;
+        position: relative;
+        @media (max-width: 900px) {
+          padding: 0;
+        }
+        h2 {
+          color: #204357;
+          font-family: Raleway;
+          font-size: 55px;
+          font-style: normal;
+          font-weight: 100;
+          line-height: normal;
+          @media (max-width: 900px) {
+            font-size: 40px;
           }
-          &:hover {
+        }
+        .blue-btn {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+        .vacancy-swiper {
+          width: 100%;
+          height: 221px;
+          .swiper-slide {
+            &:hover {
+              .vacancy-card {
+                background: #fff;
+                span {
+                  transform: scale(1.2);
+                }
+
+              }
+            }
             .vacancy-card {
-              background: #fff;
+              display: flex;
+              padding: 30px 40px;
+              flex-direction: column;
+              justify-content: flex-end;
+              align-items: flex-start;
+              gap: 20px;
+              flex: 1;
+              align-self: stretch;
+              border-radius: 40px;
+              background: #F8F9FC;
+              height: 100%;
+              width: 100%;
+              p {
+                color: #204357;
+                font-family: Raleway;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+              }
               span {
-                transform: scale(1.2);
+                color: #2CB4FE;
+                font-family: "Mplus 1p";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+                transition: .5s ease;
               }
 
             }
           }
-          .vacancy-card {
-            display: flex;
-            padding: 30px 40px;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: flex-start;
-            gap: 20px;
-            flex: 1;
-            align-self: stretch;
-            border-radius: 40px;
-            background: #F8F9FC;
-            height: 100%;
-            width: 100%;
-            p {
-              color: #204357;
-              font-family: Raleway;
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 700;
-              line-height: normal;
-            }
-            span {
-              color: #2CB4FE;
-              font-family: "Mplus 1p";
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 800;
-              line-height: normal;
-              transition: .5s ease;
-            }
-
-          }
         }
-
         .vacancy-swiper-button-prev {
           width: 51px;
           height: 135px;
@@ -2634,7 +2662,7 @@ body {
           align-items: center;
           justify-content: center;
           position: absolute;
-          top: 42%;
+          top: 45%;
           left: 0;
           transform: translateY(-50px);
           z-index: 3;
@@ -2657,7 +2685,7 @@ body {
           align-items: center;
           justify-content: center;
           position: absolute;
-          top: 42%;
+          top: 45%;
           right: 0;
           transform: translateY(-50px);
           z-index: 3;
@@ -2671,8 +2699,8 @@ body {
             }
           }
         }
-
       }
+
     }
   }
 }
@@ -3169,6 +3197,7 @@ body {
                 object-fit: cover;
                 @media (max-width: 1250px) {
                   object-position: top center;
+                  height: auto;
                 }
               }
             }
@@ -3632,16 +3661,16 @@ body {
         .contacts-columns {
           display: flex;
           gap: 50px;
-          @media (max-width: 768px) {
+          @media (max-width: 1024px) {
             flex-direction: column;
             gap: 30px;
           }
           .col {
-            width: calc((100% - 50px) / 2);
+            width: calc((100% - 50px * 2) / 3);
             display: flex;
             flex-direction: column;
             gap: 30px;
-            @media (max-width: 768px) {
+            @media (max-width: 1024px) {
               width: 100%;
             }
             .row {
@@ -3713,6 +3742,63 @@ body {
                     display: block;
                     background: var(--brand-color);
                     border-radius: 50px;
+                  }
+                }
+              }
+              .links-wrap {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                .link-wrap {
+                  display: flex;
+                  align-items: center;
+                  gap: 30px;
+                  span {
+                    font-family: "Mplus 1p";
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 29.7px;
+                    text-align: left;
+
+                  }
+                }
+              }
+              .contact-link {
+                display: flex;
+                width: 40px;
+                height: 40px;
+                padding: 20px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 10px;
+                background: #F7F9FC;
+                box-shadow: 0px 3px 4px -2px rgba(86, 146, 178, 0.31);
+                svg {
+                  flex-shrink: 0;
+                }
+                &.watsapp {
+                  &:hover {
+                    background: #3ADC49;
+                    svg path {
+                      fill: #fff;
+                    }
+                  }
+                }
+                &.telegram {
+                  &:hover {
+                    background: #2CB4FE;
+                    svg path {
+                      fill: #fff;
+                    }
+                  }
+                }
+                &.vk {
+                  &:hover {
+                    background: #548CF6;
+                    svg path {
+                      fill: #fff;
+                    }
                   }
                 }
               }
@@ -4005,6 +4091,7 @@ body {
               width: 100%;
               overflow: hidden;
               border-radius: 18.667px;
+              cursor: pointer;
               img {
                 width: 100%;
                 height: 100%;
@@ -4106,6 +4193,7 @@ body {
               width: 100%;
               overflow: hidden;
               border-radius: 18.667px;
+              cursor: pointer;
               img {
                 width: 100%;
                 height: 100%;

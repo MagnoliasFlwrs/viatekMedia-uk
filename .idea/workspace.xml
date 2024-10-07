@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0ff91e8b-9bed-4e0c-95ca-118d68f9a8d0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/gratitude.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/gratitude.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/licensy.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/licensy.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +84,7 @@
       <workItem from="1728234284960" duration="4326000" />
       <workItem from="1728243360384" duration="5778000" />
       <workItem from="1728284447662" duration="737000" />
-      <workItem from="1728285429931" duration="97000" />
+      <workItem from="1728285429931" duration="6504000" />
     </task>
     <servers />
   </component>

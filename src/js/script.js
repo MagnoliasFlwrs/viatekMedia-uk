@@ -146,7 +146,7 @@ if (vacancySwiper) {
     const swiperVacancy = new Swiper(vacancySwiper, {
         loop: true,
         slidesPerView: 1.3,
-
+        spaceBetween: 20,
         breakpoints: {
             900: {
                 slidesPerView: 2.2,
