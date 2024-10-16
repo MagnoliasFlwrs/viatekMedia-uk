@@ -3397,14 +3397,155 @@ body {
     padding: 0 15px;
   }
 }
-.page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content p {
+.page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box {
+  padding-top: 20px;
+  border-top: 1px solid rgba(86, 146, 178, 0.31);
+  display: flex;
+  margin-bottom: 30px;
+  gap: 30px;
+}
+@media (max-width: 1024px) {
+  .page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box .contacts-column {
+  display: flex;
+  max-width: 326px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box .contacts-column {
+    max-width: 100%;
+  }
+}
+.page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box .contacts-column .title {
+  color: #204357;
+  font-family: "Mplus 1p";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media (max-width: 1024px) {
+  .page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box .contacts-column .title {
+    font-size: 16px;
+  }
+}
+.page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box .contacts-column .row {
+  display: flex;
+  flex-direction: column;
+}
+.page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box .contacts-column .row span {
+  color: #204357;
+  font-family: "Mplus 1p";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box .contacts-column .row a {
+  color: #204357;
+  font-family: "Mplus 1p";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+@media (max-width: 1024px) {
+  .page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box .contacts-column .row a {
+    font-size: 20px;
+  }
+}
+.page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box .contacts-column .row p {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: #204357;
+  font-family: "Mplus 1p";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box .contacts-column .row p::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 6C12.5523 6 13 6.44772 13 7V11.5858L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L11.2929 12.7071C11.1054 12.5196 11 12.2652 11 12V7C11 6.44772 11.4477 6 12 6Z' fill='%23204357'/%3E%3C/svg%3E");
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box .info-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+  flex: 1;
+}
+.page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box .info-column .title {
+  color: #204357;
+  font-family: "Mplus 1p";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media (max-width: 1024px) {
+  .page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box .info-column .title {
+    font-size: 16px;
+  }
+}
+.page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box .info-column span {
   color: #204357;
   font-family: "Mplus 1p";
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 30px */
-  margin: 0 0 30px;
+  line-height: normal;
+}
+@media (max-width: 1024px) {
+  .page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box .info-column span {
+    font-size: 16px;
+  }
+}
+.page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box .info-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box .info-column ul li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #204357;
+  font-family: "Mplus 1p";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 1024px) {
+  .page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box .info-column ul li {
+    font-size: 16px;
+  }
+}
+.page-content .content .page-content-wrapper .container .vacancies-list .accordion-item .accordion-content .content-box .info-column ul li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: #2D2929;
+  border-radius: 50px;
+  flex-shrink: 0;
+}
+.page-content .content .page-content-wrapper .container .vacancies-list .accordion-item.active {
+  background: #F8F9FC;
 }
 .page-content .content .page-content-wrapper .container .vacancies-list .accordion-item.active .accordion-content {
   max-height: 200px;
